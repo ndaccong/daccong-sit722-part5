@@ -27,7 +27,7 @@ jobs:
         run: sh ./scripts/build-image.sh
 
       - name: Publish
-        run: ./scripts/push-image.sh
+        run: sh ./scripts/push-image.sh
 
       - uses: tale/kubectl-action@v1
         with:
@@ -35,4 +35,4 @@ jobs:
           kubectl-version: v1.24.2
 
       - name: Deploy
-        run: ./scripts/deploy.sh
+        run: sh ./scripts/deploy.sh
